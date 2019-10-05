@@ -31,4 +31,4 @@ jobs:
         sudo chown root:root /
         sudo snap install hub --classic
         git config --global core.editor vim
-        hub pull-request -f "Testing pull-request" -b avcconti:master -h avcconti:docs_build
+        hub pull-request -f -m "Testing pull-request" -b avcconti:master -h avcconti:docs_build
