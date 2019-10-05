@@ -29,4 +29,3 @@ jobs:
         sudo chown root:root /
         sudo snap install hub --classic
         hub pull-request "Testing pull-request" -b avcconti:master -h avcconti:docs_build
-        hub pull-request
