@@ -30,4 +30,5 @@ jobs:
         git push --force "${REMOTE}" HEAD:docs_build
         sudo chown root:root /
         sudo snap install hub --classic
+        export GIT_EDITOR=/bin/vim
         hub pull-request -f "Testing pull-request" -b avcconti:master -h avcconti:docs_build
