@@ -25,5 +25,5 @@ jobs:
         git add -A
         git commit -m "Automated docs build" --allow-empty
         REMOTE="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git push "${REMOTE}" HEAD:docs_build
+        git push --force "${REMOTE}" HEAD:docs_build
         hub pull-request
