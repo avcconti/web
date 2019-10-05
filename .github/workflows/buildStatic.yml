@@ -26,5 +26,6 @@ jobs:
         git commit -m "Automated docs build" --allow-empty
         REMOTE="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
         git push --force "${REMOTE}" HEAD:docs_build
+        sudo chown root:root /
         sudo snap install hub --classic
         hub pull-request
