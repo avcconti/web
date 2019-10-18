@@ -21,8 +21,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        #Remove local and remote branch
         git branch -D docs_build &>/dev/null || true
         git push origin --delete docs_build &>/dev/null || true
+        
+        #Create branch that will server as the source of the PR
         git checkout -b docs_build
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}users.noreply.github.com"
