@@ -32,7 +32,7 @@ jobs:
         git add -A
         git commit -m "Automated docs build ${version}" --allow-empty
         REMOTE="https://${GITHUB_ACTOR}:$GITHUB_TOKEN@github.com/${GITHUB_REPOSITORY}.git"
-        git push --force "${REMOTE}" HEAD:docs_build
+        git push "${REMOTE}" HEAD:docs_build
         
         #install Hub to easily do a PR
         sudo chown root:root /
