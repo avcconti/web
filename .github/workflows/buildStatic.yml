@@ -33,6 +33,8 @@ jobs:
         git commit -m "Automated docs build ${version}" --allow-empty
         REMOTE="https://${GITHUB_ACTOR}:$GITHUB_TOKEN@github.com/${GITHUB_REPOSITORY}.git"
         git push --force "${REMOTE}" HEAD:docs_build
+        
+        #install Hub to easy do a PR
         sudo chown root:root /
         sudo snap install hub --classic
         git config --global core.editor vim
